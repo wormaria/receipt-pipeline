@@ -24,7 +24,7 @@ this is built around how small rental owners actually track expenses:
 3) pick property + category  
 4) hit confirm → row gets appended  
 
-## data model (mvp)
+## mvp data model
 ```json
 {
   "receipt_id": "rcpt_2025_00123",
