@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+python-dotenv
+pydantic
+pillow
+pytesseract
+openpyxl
+python-dateutil
+openai
+requests
