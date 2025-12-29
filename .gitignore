@@ -1,0 +1,45 @@
+# python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# virtual environment
+.venv/
+env/
+venv/
+
+# environment variables
+.env
+
+# vscode
+.vscode/
+*.code-workspace
+
+# macos
+.DS_Store
+
+# logs
+*.log
+logs/
+
+# receipt data (never commit personal/financial data)
+receipts/
+data/receipt_images/
+data/parsed/
+exports/
+
+# temp files
+*.tmp
+*.swp
+*.bak
+
+# test artifacts
+.coverage
+htmlcov/
+.pytest_cache/
