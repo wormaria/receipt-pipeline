@@ -6,6 +6,15 @@ built for my dad’s rental property business.
 also built to explore what “good” data pipelines look like when humans are actually part of the loop.
 
 ---
+## 🚀 live demo
+
+try it here:  
+https://your-app-name.streamlit.app
+
+note: the public demo runs in demo mode using sample data only.
+no real financial or personal information is stored or transmitted.
+
+---
 
 ## what this is
 
