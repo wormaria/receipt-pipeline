@@ -1,45 +1,39 @@
-# python
+# Python
 __pycache__/
-*.py[cod]
+*.pyc
 *.pyo
 *.pyd
-*.so
-*.egg-info/
-.eggs/
-dist/
-build/
 
-# virtual environment
+# Virtual environment
 .venv/
-env/
 venv/
+env/
 
-# environment variables
-.env
-
-# vscode
-.vscode/
-*.code-workspace
-
-# macos
-.DS_Store
-
-# logs
-*.log
+# Local runtime artifacts
+tmp_uploads/
 logs/
 
-# receipt data (never commit personal/financial data)
-receipts/
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment / secrets
+.env
+
+# App outputs (do NOT commit real data)
 data/receipt_images/
-data/parsed/
-exports/
+data/exports/
 
-# temp files
-*.tmp
-*.swp
-*.bak
+# Streamlit
+.streamlit/
 
-# test artifacts
-.coverage
-htmlcov/
-.pytest_cache/
+# Jupyter
+.ipynb_checkpoints/
+.venv/
+tmp_uploads/
+__pycache__/
+*.pyc
+.DS_Store
+.env
+data/exports/
+data/receipt_images/
