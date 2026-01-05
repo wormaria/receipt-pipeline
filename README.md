@@ -1,109 +1,103 @@
-# 🧾 Receipt → Spreadsheet  
-**Automated expense logging for small rental property owners**
+# 🧾 receipt → spreadsheet
 
-This app converts receipt photos into clean, categorized spreadsheet entries using OCR, structured extraction, and a human-in-the-loop confirmation step.
+a tiny demo app for turning messy paper receipts into clean, categorized spreadsheet rows.
 
-Built for my dad’s rental property business — and designed to demonstrate production-grade data pipelines and thoughtful product engineering.
-
----
-
-## 🚀 Live Demo
-**Try it here:**  
-> https://your-app-name.streamlit.app
-
-
-## ⚠️ Demo Disclaimer
-
-This application is a functional prototype and portfolio demonstration.  
-The public demo runs in **Demo Mode**, using sample data and cached OCR results to ensure fast, stable performance.
-
-No real financial or personal data is stored or transmitted in the public demo.  
-Local usage supports full receipt processing and persistent storage.
-
+built for my dad’s rental property business.  
+also built to explore what “good” data pipelines look like when humans are actually part of the loop.
 
 ---
 
-## 🧰 Tech Stack
+## what this is
 
-**Core**
-- Python
-- Streamlit (UI)
-- EasyOCR (optical character recognition)
-- Pandas + OpenPyXL (spreadsheet output)
-- Pillow (image handling)
+small rental property owners usually manage expenses with:
+- piles of paper receipts
+- manual data entry
+- inconsistent categories
+- lots of stress when tax season hits
 
-**Design & Architecture**
-- Modular pipeline design
-- Human-in-the-loop validation
-- Config-driven property & category mapping
-- Audit-ready data storage
+this app turns that chaos into something calm:
 
----
+upload a receipt → review the extracted fields → pick a property + category → confirm → done.  
+a new row gets appended to an excel sheet, and the receipt image is saved for audit.
 
-## 🧠 Problem
-
-Small rental owners typically manage expenses with:
-- piles of paper receipts  
-- manual data entry  
-- inconsistent categorization  
-- high audit risk  
-
-Tax season becomes error-prone, time-consuming, and stressful.
+fast. simple. tax-ready.
 
 ---
 
-## 💡 Solution
+## how it works (high level)
 
-Upload a receipt → review extracted fields → select property & category → confirm →  
-a new row is appended to an Excel spreadsheet and the receipt image is archived for audit.
+receipt image  
+→ ocr (easyocr)  
+→ field extraction (vendor, date, total, tax, etc.)  
+→ user review + correction  
+→ property & category enrichment  
+→ append row to excel spreadsheet  
+→ store receipt image for audit
 
-This keeps the process **fast, trustworthy, and tax-ready**.
+the pipeline is fully modular:
 
----
+src/ocr/        # ocr engine  
+src/extract/    # structured field parsing  
+src/transform/  # normalization + enrichment  
+src/output/     # excel + image persistence  
+pipeline.py     # orchestration layer  
 
-## 🧱 Architecture
-
-Receipt Image
-↓
-OCR (EasyOCR or cached demo OCR)
-↓
-Field Extraction (vendor, date, total, tax, etc.)
-↓
-User Review + Correction
-↓
-Property & Category Enrichment
-↓
-Append Row → Excel Spreadsheet
-↓
-Store Receipt Image for Audit
-
-
-### Pipeline Modules
-
-- `src/ocr/` — OCR engine
-- `src/extract/` — structured field parsing
-- `src/transform/` — enrichment & normalization
-- `src/output/` — Excel + image persistence
-- `pipeline.py` — orchestration layer
+everything is designed so pieces can be swapped out later (better ocr, different output format, database storage, etc).
 
 ---
 
-## 🧪 Demo Mode
+## demo mode
 
-For public demos (e.g. recruiters), the app runs in **Demo Mode**:
-- uses sample receipts in `demo/receipts/`
-- loads cached OCR from `demo/ocr_cache/`
-- avoids external OCR dependencies
-- remains fast, stable, and reproducible
+the public demo runs in demo mode so recruiters (and friends) can play with it safely.
 
-Local usage supports full OCR processing and persistent storage.
+demo mode:
+- uses sample receipts in demo/receipts/
+- loads cached ocr results from demo/ocr_cache/
+- avoids external ocr dependencies
+- stays fast, stable, and reproducible
+
+no real financial or personal data is stored or transmitted in the demo.
+
+local usage supports full ocr and persistent storage.
 
 ---
 
-## 🖥️ Run Locally
+## why i built this
 
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
+i wanted to build something that feels:
+- useful
+- trustworthy
+- human
+
+a lot of data pipelines optimize for speed or automation alone.  
+this one intentionally includes a human-in-the-loop step, because financial data needs context, judgment, and accountability.
+
+also, my dad had a box of receipts on his kitchen table and i thought, “we can do better than this.”
+
+---
+
+## current status
+
+this is a working prototype and ongoing project.  
+the core pipeline is complete and functional. next steps include:
+
+- supporting additional output formats (csv, database)
+- adding multi-user support
+- improving receipt field extraction robustness
+- introducing basic analytics + summaries on the expense data
+
+---
+
+## tech stack
+
+- python  
+- streamlit  
+- easyocr  
+- pandas + openpyxl  
+- pillow  
+
+---
+
+to run locally:
+
 streamlit run app.py
