@@ -1,0 +1,10 @@
+TRIANGLE PLUMBING SERVICES
+Invoice # 23017
+
+Invoice Date: January 2, 2026
+Service: Leak Repair
+
+Labor 185.00
+Parts 32.00
+Tax 15.12
+TOTAL 232.12

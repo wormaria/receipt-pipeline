@@ -1,0 +1,10 @@
+DUKE ENERGY
+Customer Statement
+
+Statement Date: 01/03/2026
+Account: 4489201
+
+Electric Service
+Previous Balance 110.22
+Current Charges 94.58
+TOTAL AMOUNT DUE 94.58

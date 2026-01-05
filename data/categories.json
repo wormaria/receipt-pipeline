@@ -1,9 +1,29 @@
 {
   "categories": [
-    {"id": "c1", "name": "Repairs & Maintenance", "schedule_e_line": "Line 14 - Repairs"},
-    {"id": "c2", "name": "Supplies", "schedule_e_line": "Line 15 - Supplies"},
-    {"id": "c3", "name": "Utilities", "schedule_e_line": "Line 17 - Utilities"},
-    {"id": "c4", "name": "Insurance", "schedule_e_line": "Line 9 - Insurance"},
-    {"id": "c5", "name": "Professional Services", "schedule_e_line": "Line 10 - Legal/Professional"}
+    {
+      "id": "c1",
+      "name": "Repairs & Maintenance",
+      "schedule_e_line": "Line 14 - Repairs"
+    },
+    {
+      "id": "c2",
+      "name": "Utilities",
+      "schedule_e_line": "Line 17 - Utilities"
+    },
+    {
+      "id": "c3",
+      "name": "Professional Services",
+      "schedule_e_line": "Line 10 - Legal and Professional Fees"
+    },
+    {
+      "id": "c4",
+      "name": "Supplies",
+      "schedule_e_line": "Line 18 - Office Expense"
+    },
+    {
+      "id": "c5",
+      "name": "Insurance",
+      "schedule_e_line": "Line 9 - Insurance"
+    }
   ]
 }
