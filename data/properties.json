@@ -1,0 +1,7 @@
+{
+  "properties": [
+    {"id": "p1", "name": "123 Maple St"},
+    {"id": "p2", "name": "Unit A - Oak Apartments"},
+    {"id": "p3", "name": "Unit B - Oak Apartments"}
+  ]
+}
