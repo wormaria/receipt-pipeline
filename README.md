@@ -1,4 +1,6 @@
-# 🧾 receipt → spreadsheet
+# . ݁₊ ⊹ . ݁˖ . ݁ receipt → spreadsheet . ݁₊ ⊹ . ݁˖ . ݁
+
+
 
 a tiny demo app for turning messy paper receipts into clean, categorized spreadsheet rows.
 
@@ -6,10 +8,11 @@ built for my dad’s rental property business.
 also built to explore what “good” data pipelines look like when humans are actually part of the loop.
 
 ---
-## 🚀 live demo
+## live demo
 
 try it here:  
-https://your-app-name.streamlit.app
+
+https://receiptpipeline.streamlit.app
 
 note: the public demo runs in demo mode using sample data only.
 no real financial or personal information is stored or transmitted.
